@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Burger",
+    "price": 5.0,
+    "imageUrl": "https://www.safefood.net/getmedia/d81f679f-a5bc-4a16-a592-248d3b1dc803/burger_1.jpg?width=1280&height=720&ext=.jpg"
+  },
+  {
+    "name": "Chips",
+    "price": 2.0,
+    "imageUrl": "https://sausagemaker.com/wp-content/uploads/Homemade-French-Fries_8.jpg"
+  },
+  {
+    "name": "Pizza Slice",
+    "price": 3.00,
+    "imageUrl": "https://t4.ftcdn.net/jpg/06/95/07/01/360_F_695070170_fBWWqhZx3V7iJZPYoC2jSRWvM0EJguaG.jpg"
+  }
+]

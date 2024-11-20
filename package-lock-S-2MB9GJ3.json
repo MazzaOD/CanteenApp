@@ -1,12 +1,13 @@
 {
-  "name": "assigment1",
+  "name": "y",
   "version": "0.1.0",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
-      "name": "assigment1",
+      "name": "y",
       "version": "0.1.0",
+      "license": "ISC",
       "dependencies": {
         "@testing-library/jest-dom": "^5.17.0",
         "@testing-library/react": "^13.4.0",
@@ -17,11 +18,7 @@
         "react-scripts": "5.0.1",
         "web-vitals": "^2.1.4"
       },
-      "devDependencies": {
-        "autoprefixer": "^10.4.20",
-        "postcss": "^8.4.47",
-        "tailwindcss": "^3.4.14"
-      }
+      "devDependencies": {}
     },
     "node_modules/@adobe/css-tools": {
       "version": "4.4.0",

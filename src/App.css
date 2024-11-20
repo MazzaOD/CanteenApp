@@ -1,38 +1,482 @@
+/* General App Styles */
+
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 .App {
+  text-align: center;
+  width: 100%;
+  background-color: #f4f4f9;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  width: 100%;
+  height: 64px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.pt-20 { /* Adjust padding top to prevent overlap */
+  padding-top: 5rem; /* Matches the header height */
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 20px;
+  color: #ff5722;
+  text-transform: uppercase;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.menu p {
+  margin-right: 24px;
+}
+
+.menu p a {
+  text-decoration: none;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.menu p a:hover {
+  color: #ff5722;
+}
+
+.order-button {
+  padding: 8px 24px;
+  border-radius: 18px;
+  background-color: #ff5722;
+  color: #fff !important;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #e64a19;
+}
+
+/* Banner */
+.banner {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  background-color: #ff5722;
+  color: #fff;
+  height: 400px;
+}
+
+.banner .content {
+  width: 100%;
+  margin-top: 80px;
+}
+
+.banner img {
+  width: 43vw;
+  object-fit: cover;
+  clip-path: polygon(13% 0, 100% 0%, 100% 100%, 0% 100%);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.banner h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.call-to-action {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffc107;
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+}
+
+.call-to-action:hover i {
+  transform: translateX(6px);
+}
+
+.call-to-action i {
+  color: #ffc107;
+  font-size: 18px;
+  margin-left: 8px;
+}
+
+/* Login Form */
+.login-form {
+  max-width: 320px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Menu and Button Styles */
+.menu-btn, .menu-item, button {
+  background-color: #ffc107;
+  color: #333;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  padding: 15px 30px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.menu-btn:hover, .menu-item:hover, button:hover {
+  background-color: #e0a800;
+}
+
+.menu-section {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.menu-grid {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.menu-card, .menu-item {
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #f8f9fa;
+  padding: 15px 25px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover, .menu-item:hover {
+  background-color: #e2e6ea;
+}
+
+/* Checkout and Confirmation */
+.checkout-summary {
+  text-align: left;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.confirm-btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.confirm-btn:hover {
+  background-color: #218838;
+}
+
+.order-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #28a745;
+  margin-top: 20px;
+}
+
+
+
+.menu-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.menu-item {
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.menu-item p {
+  margin: 0;
+}
+
+.menu-item button {
+  margin-top: 10px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item button:hover {
+  background-color: #e64a19;
+}
+
+/* src/components/Login.css */
+.login-container {
+  background-color: #f4f4f9;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.login-card input {
+  font-size: 1.1rem;
+}
+
+.login-card button {
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+/* src/App.css */
+.menu-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu-card .card-body {
+  background-color: #ff5722;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.menu-card .card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.btn-success {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.menu-image {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.menu-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  background-color: #f8f9fa; /* Light background to match Bootstrap's 'bg-light' */
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+header button {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Banner */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content */
+  padding: 40px;
+  background-color: #ff5722;
+  color: #fff;
+  height: 100vh; /* Full viewport height */
+  max-height: 100vh; /* Limit to viewport height */
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.banner .content {
+  width: 100%;
+  max-width: 600px; /* Set a max width for better readability */
+  margin-top: 0; /* Align content vertically */
+}
+
+.banner img {
+  width: 50vw;
+  object-fit: cover;
+  clip-path: polygon(13% 0, 100% 0%, 100% 100%, 0% 100%);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.banner h1 {
+  font-size: 3rem; /* Larger font size */
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.banner .call-to-action {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ffc107;
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+}
+
+/* Menu Container */
+.menu-container {
+  height: 100vh; /* Full viewport height */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding-top: 60px; /* Spacing to avoid overlap with header */
 }
 
-.App-link {
-  color: #61dafb;
+/* Menu Card Styling */
+.menu-card {
+  width: 100%; /* Full width of column */
+  max-width: 300px; /* Limit card width */
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+.menu-image {
+  height: 200px; /* Taller image for visual impact */
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+  background-color: #ff5722;
+  color: #fff;
+  border-radius: 0 0 8px 8px;
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.btn-success {
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.menu-item-image {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.menu-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item-image {
+  width: 150px; /* Increase width as needed */
+  height: 150px; /* Increase height as needed */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Optionally adjust card styling to accommodate larger images */
+.menu-card, .item {
+  padding: 20px;
+}
+
